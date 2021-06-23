@@ -1,27 +1,29 @@
-import firebase from "firebase";
+//import react, router
 import { createContext, ReactNode, useEffect, useState } from "react";
+
+//imports objetos do projeto
+import firebase from "firebase";
 import { auth } from "../services/firebase";
 
+//tipagem typescript
 type User = {
-    id: string;
-    name: string;
-    avatar: string;
+  id: string;
+  name: string;
+  avatar: string;
 }
-
 type AuthContextType = {
-    user: User | undefined;
-    signInWithGoogle: () => Promise<void>;
+  user: User | undefined;
+  signInWithGoogle: () => Promise<void>;
 }
-
 type AuthContextProviderProps = {
-    children: ReactNode;
+  children: ReactNode;
 }
 
+//exportações
 export const AuthContext = createContext({} as AuthContextType);
-
 export function AuthContextProvider(props: AuthContextProviderProps) {
 
-    const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
@@ -68,12 +70,12 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
   }
 
-    return (
+  return (
 
-        < AuthContext.Provider value={{ user, signInWithGoogle }}>
-            {props.children}
-        </AuthContext.Provider>
+    < AuthContext.Provider value={{ user, signInWithGoogle }}>
+      {props.children}
+    </AuthContext.Provider>
 
 
-    )
+  )
 }

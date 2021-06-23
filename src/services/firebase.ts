@@ -1,7 +1,12 @@
+//import react, router
+
+//imports objetos do projeto
 import firebase from 'firebase/app';
 
+//imports internos do objeto
 import 'firebase/auth';
 import 'firebase/database';
+
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
