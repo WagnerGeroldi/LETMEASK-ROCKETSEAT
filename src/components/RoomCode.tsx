@@ -13,12 +13,12 @@ type RoomCodeProps = {
     code: string;
 }
 
-function copyRoomCodeToCplipboard(props: RoomCodeProps) {
-    navigator.clipboard.writeText(props.code)
-}
+export function RoomCode(props: RoomCodeProps ) {
 
+    function copyRoomCodeToCplipboard() {
+        navigator.clipboard.writeText(props.code)
+    }
 
-export function RoomCode() {
     return (
         <button className="room-code" onClick={copyRoomCodeToCplipboard}>
             <div>
