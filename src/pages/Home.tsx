@@ -45,6 +45,11 @@ export function Home() {
             return;
         }
 
+        if(roomRef.val().endedAt) {
+            alert('Esta sala foi encerrada pelo Admin')
+            return
+        }
+
         history.push(`/rooms/${roomCode}`)
     }
 
