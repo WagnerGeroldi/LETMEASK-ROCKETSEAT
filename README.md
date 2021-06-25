@@ -4,6 +4,10 @@
 
 Nesta aplicação o usuário poderá fazer perguntas através de autenticação com sua conta do Google, poderá criar uma sala para ser Admin e marcar perguntas como respondidas e também excluir caso necessário.
 
+Acesse o projeto e teste você mesmo!! 
+
+https://letmeask-b76dd.web.app/
+
 ## Tela inicial :fire:
 
 ![image-20210625103053213](C:\Users\Wagner Geroldi\AppData\Roaming\Typora\typora-user-images\image-20210625103053213.png)
@@ -14,14 +18,10 @@ Nesta aplicação o usuário poderá fazer perguntas através de autenticação 
 
 
 
-> ```html
-> <ul>
->     <li>React JS</li>
->     <li>SASS</li>
->     <li>Firebase</li>
->     <li>TypeScript</li>
-> </ul>
-> ```
+- REACTJS
+- SASS
+- TYPESCRIPT
+- FIREBASE
 
 
 
