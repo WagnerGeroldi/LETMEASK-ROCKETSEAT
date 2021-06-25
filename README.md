@@ -10,6 +10,7 @@ https://letmeask-b76dd.web.app/
 
 ## Tela inicial :fire:
 
+![sala inicial](https://user-images.githubusercontent.com/74829196/123458558-8c0a0680-d5bb-11eb-9ea1-39dff7209c30.png)
 
 
 
