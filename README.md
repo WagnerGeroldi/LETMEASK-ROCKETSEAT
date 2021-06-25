@@ -28,6 +28,8 @@ https://letmeask-b76dd.web.app/
 
 ## Visão da sala para um usuário:fire::fire:
 
+![sala user](https://user-images.githubusercontent.com/74829196/123458620-a17f3080-d5bb-11eb-963a-c38565412566.png)
+
 
 
 ## Visão da Sala para o Admin:fire::fire:
