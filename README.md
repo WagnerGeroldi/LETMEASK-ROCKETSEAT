@@ -30,3 +30,6 @@ https://letmeask-b76dd.web.app/
 
 
 ## Visão da Sala para o Admin:fire::fire:
+
+![sala admin](https://user-images.githubusercontent.com/74829196/123458422-6c72de00-d5bb-11eb-8097-6a58c15a6e48.png)
+
