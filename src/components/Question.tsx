@@ -1,5 +1,6 @@
 // import react, router
 import { ReactNode } from 'react'
+import cx from 'classnames'
 
 //import sass
 import '../styles/question.scss'
@@ -12,22 +13,34 @@ type QuestionProps = {
         avatar: string;
     };
     children?: ReactNode;
+    isAnswered?: boolean;
+    isHighlighted?: boolean;
 }
 
 
-export function Question(props: QuestionProps) {
-    return(
-        <div className="question">
+export function Question({
+    content,
+    author,
+    isAnswered = false,
+    isHighlighted = false,
+    children,
+    }: QuestionProps) {
+    return (
+        <div className={cx(
+            'question',
+            {answered: isAnswered},
+            {highlighted: isHighlighted && !isAnswered}
+            )}>
             <p>
-                {props.content}
+                {content}
             </p>
             <footer>
                 <div className="user-info">
-                    <img src={props.author.avatar} alt={props.author.name} />
-                    <span>{props.author.name}</span>
+                    <img src={author.avatar} alt={author.name} />
+                    <span>{author.name}</span>
                 </div>
                 <div>
-                    {props.children}
+                    {children}
                 </div>
             </footer>
         </div>

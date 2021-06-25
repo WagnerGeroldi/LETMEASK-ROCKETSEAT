@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react'
 //imports objetos do projeto
 import { database } from '../services/firebase'
 
-//import de svgs
-
 //import sass
 import '../styles/room.scss'
 import { useAuth } from './useAuth';
@@ -19,7 +17,7 @@ type QuestionType = {
     };
     content: string;
     isAnswered: boolean;
-    isHighLighted: boolean;
+    isHighlighted: boolean;
     likeCount: number;
     likeId: string | undefined;
 }
@@ -30,7 +28,7 @@ type FirebaseQuestions = Record<string, {
     };
     content: string;
     isAnswered: boolean;
-    isHightLighted: boolean;
+    isHightlighted: boolean;
     likes: Record<string, {
     authorId: string;
     }>
@@ -54,7 +52,7 @@ export function useRoom(roomId: String) {
                     id: key,
                     content: value.content,
                     author: value.author,
-                    isHighLighted: value.isHightLighted,
+                    isHighlighted: value.isHightlighted,
                     isAnswered: value.isAnswered,
                     likeCount: Object.values(value.likes ?? {}).length,
                     likeId: Object.entries(value.likes ?? {}).find(([key, like]) => like.authorId === user?.id)?.[0],
